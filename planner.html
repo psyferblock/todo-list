@@ -9,125 +9,41 @@
     <script src="todo.js" defer></script>
 </head>
 <body>
-    <!-- <div class="main"> -->
-        <h1 class="title">to do list </h1>
 
-        <div class="all-tasks">
-            
-            
-            <form action="" >
-                <input 
-                type="text"
-                class="new list"
-                id="new-list"
-                placeholder="new todo element"
-                aria-label="new list name"
-                />
-                <button class="btn create" id="get-todo-elements" type="submit" aria-label="create new list">+</button>
-            </form>
-            <h2 class="task-list-title">the to do lists</h2>
-            <ul class="task-list"  id="task-list">
-                <!-- <li class = "list-name active-list">last element inserted</li> 
-                <li class = "list-  name">work</li>
-                <li class = "list-name">other stuff</li>  -->
-            </ul>
-        </div>
-        <div class="done-list" id="done-list" >
-            </div>
-                    <!-- header to do elements -->
-
-            <!-- <div class="todo-header" >
-                <h2 class="list-title">something title</h2>
-                <p class="task-count" > tasks remainig</p>
-
-            </div> -->
-            <!-- <div class="todo-body">
-                <div class="tasks" >
-                    <div class="task">
-                        <input 
-                            type="checkbox"
-                            id="(to be determined)"/>
-                        <label for ="task-1">
-                            <span class="custom-checkbox">
-                            </span>
-                            record todo list 
-                        </label>
-                    </div>-->
-                    <!-- end task 1 -->
-                    <!-- <div class="task">
-                        <input 
-                            type="checkbox"
-                            id="(to be determined)"/>
-                        <label for ="task-2">
-                            <span class="custom-checkbox">
-                            </span>
-                            task 2
-                        </label>
-                    </div> -->
-                    <!-- end task 2 -->
-
-                    <!-- <div class="task">
-                        <input 
-                            type="checkbox"
-                            id="(to be determined)"/>
-                        <label for ="task-3">
-                            <span class="custom-checkbox">
-                            </span>
-                        task 3 
-                        </label>
-                    </div> -->
-                    <!-- end task 3 --> 
-
-                <!-- </div>  -->
-                <!-- end todo body -->
-
-                <!-- new task creator -->
-                <!-- <div class ="new-task-creator">
-                    <form action="">
-                        <input 
-                        type="text"
-                        class="new list"
-                        placeholder="new list name"
-                        aria-label="new list name"
-                        />
-                        <button class="btn create" aria-label="create new list">+</button>
-                    </form>
-                </div>     -->
-                
-                <!-- new class deletor -->
-                <!-- <div class="delete-stuff">
-                    <button class="btn delete"  ></button>
-                        clear completed dasks
-                    </button>
-                    <button class="btn delete" >
-                        delete lists
-                    </button>
-                </div> -->
-
-                <!-- done body  -->
-               
-            <!-- </div>
-            <div class="done-body"> -->
-                <!-- header done elements -->
-                <!-- <div class="done-header">
-                    <h2 class="list-title">done elements</h2>
-                    <p class="task-count"> highlited specials</p>
-                </div>
-                <div class="done-tasks">
-                    <div class="task">
-                        <input 
-                            type="checkbox"
-                            id="(to be determined)"/>
-                        <label for ="task-1">
-                            <span class="custom-checkbox">
-                            </span>
-                            record todo list 
-                        </label>
-                    </div>
-            </div>
-        </div>     -->
-    <!-- </div>      -->
 
     
-</body>
+        <div class="main">
+            <h1 class="title">to do list </h1>
+
+            <div class="all-tasks">
+            
+                 
+                <input type="text" class="new list" id="title-field" placeholder="new todo element" aria-label="new list name"/>
+                <input type="text" class="new list" id="description-field" placeholder="new todo element" aria-label="new list name"/>
+                <input type="text" class="new list" id="priority-field" placeholder="new todo element" aria-label="new list name"/>
+                <input type="datetime-local" class="new list" id="date-time-field" placeholder="new todo element" aria-label="new list name"/>
+                        
+                    <button class="btn create" id="get-todo-elements" aria-label="create new list">+</button>
+              
+                <h2 class="task-list-title">the to do elements</h2>
+                    <div class="class-box">
+                            <table id="todo-table">
+                                <thead>
+                                    <tr>
+                                      <th>title</th>
+                                      <th>description</th>
+                                      <th>priority</th>
+                                      <th>date/time</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+            
+                                  </tbody>
+                            </table>
+
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </body>
 </html>

@@ -33,16 +33,19 @@
     box-shadow: 3px ;
 }
 
-.task-app{
+.{
     margin-top: 50vh;
 
 }
-.task-motivation{
+.class-box{
+    width: 100vw;
+    height: 20vh;
+    background-color:green;
 
 }
 
 /* adding content box */
-.adding-box{
+.{
     background-color: #b39ea0;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: oblique;
@@ -51,16 +54,16 @@
 
 }
 
-.save-todo-btn{
+.{
     border-radius: 30px;
 }
 
-.input{
+.{
 
 }
-.lists{
+.{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+}  
