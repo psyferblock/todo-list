@@ -1,0 +1,66 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main{
+    background-color: #CEB1B3;
+    margin: 10vw;
+    height:100vh;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px 8px #3337;
+    overflow: hidden;
+}
+
+/* nav bar and first 2 elements */
+.main-nav{
+    display:flex;
+    justify-content: space-around;
+    align-items:left;
+    background-color: #bb9b9e;
+    margin:10px;
+    margin-right:5vw;
+    border-radius: 15px;
+    width: 75vw;
+    
+    
+
+}
+.nav-bar{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    border: 0 solid black;
+    box-shadow: 3px ;
+}
+
+.task-app{
+    margin-top: 50vh;
+
+}
+.task-motivation{
+
+}
+
+/* adding content box */
+.adding-box{
+    background-color: #b39ea0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    min-width: 10vw;
+    max-width:40vh;
+
+}
+
+.save-todo-btn{
+    border-radius: 30px;
+}
+
+.input{
+
+}
+.lists{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
