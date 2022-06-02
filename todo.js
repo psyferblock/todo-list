@@ -39,6 +39,7 @@ for (const rows in row){
 
        
         row[rows].style.textDecoration ="line-through"
+        
         moveToDone(row)
         // table_element.deleteRow(row )
         
@@ -47,6 +48,7 @@ for (const rows in row){
 
 console.log(row)
 function moveToDone(e){
+    console.log(e)
     let li_done=document.createElement("li")
     let string_e= e.toString(JSON.stringify())
    
