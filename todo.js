@@ -64,6 +64,8 @@ sort_btn.addEventListener("click",sortTable)
 function sortTable() {
     let table, rows, switching, i, x, y, shouldSwitch, priority;
     table = document.getElementById("todo-table");
+    rows=document.getElementsByTagName("tr")
+    priority=document.getElementById("priority-field")
     switching = true;
     
     while (switching) {
@@ -91,6 +93,9 @@ function sortTable() {
       if (shouldSwitch) {
         
         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }else{
+        rows[i].parentNode.insertAfter(rows[i + 1], rows[i]);
         switching = true;
       }
     }
