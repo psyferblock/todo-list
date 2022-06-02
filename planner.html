@@ -23,14 +23,23 @@
                     <input type="text" class="new-list secondary" id="description-field" placeholder="describe it simply" aria-label="new list name"/>
                    </div>
                     <div class="other-boxes">
-                    <input type="text" class="new-list priority" id="priority-field" placeholder="priority" aria-label="new list name"/>
+                    <input type="text" list="choose-priority" class="new-list priority" id="priority-field" placeholder="priority" aria-label="new list name"/>
+                    <datalist id="choose-priority">
+                        <option value="high">
+                        <option value="neccessary">
+                        <option value="meh">
+                    </datalist>
+                    
                     <input type="datetime-local" class="new-list" id="date-time-field" placeholder="new todo element" aria-label="new list name"/>
-                        
+                    </div>
+                    <div> 
                     <button class="btn-create" id="get-todo-elements" aria-label="create new list">+</button>
                     </div>
+                    
                 </div>
                 <h2 class="task-list-title"><span>to do</span> <span>done </span></h2>
                 <hr >
+                <p><button onclick="sortTable()">Sort</button></p>
                 <div class="table-box-main">   
                     <div class="class-box">
                             <table id="todo-table">
