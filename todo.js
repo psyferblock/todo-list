@@ -14,6 +14,11 @@ document.getElementById("get-todo-elements").addEventListener("click",(e)=>{
     }
     let id=Date.now();
     localStorage.setItem(id,JSON.stringify(new_todo_elements))
+    title_field.value=""
+    description_field.value=""
+    priority_field.value=""
+    date_time_field.value=""
+
 })
 
 function displayTable(){
@@ -94,13 +99,16 @@ function sortTable() {
         
         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
         switching = true;
-      }else{
-        rows[i].parentNode.insertAfter(rows[i + 1], rows[i]);
-        switching = true;
+    //   }else{
+    //     rows[i].parentNode.insertAfter(rows[i + 1], rows[i]);
+    //     switching = true;
       }
     }
   }
 
+function searchTodo(){
+
+}
     
 
 

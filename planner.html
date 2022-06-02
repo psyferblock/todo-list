@@ -32,7 +32,7 @@
                         <option value="meh">
                     </datalist>
                     
-                    <input type="datetime-local" class="new-list" id="date-time-field" placeholder="new todo element" aria-label="new list name"/>
+                    <input type="date" class="new-list" id="date-time-field" placeholder="new todo element" aria-label="new list name"/>
                     </div>
                     <div> 
                     <button class="btn-create" id="get-todo-elements" aria-label="create new list">+</button>
@@ -41,7 +41,10 @@
                 </div>
                 <h2 class="task-list-title"><span>to do</span> <span>done </span></h2>
                 <hr >
-                <p><button id="sort-btn">Sort</button></p>
+                <div class="all-tasks">
+                <input type="text" id="searching-text"class="new-list">
+                <p><button class="btn-create"id="sort-btn">Sort</button></p>
+                </div>
                 <div class="table-box-main">   
                     <div class="class-box">
                             <table id="todo-table">
