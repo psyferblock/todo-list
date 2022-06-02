@@ -1,3 +1,5 @@
+let ul_done=document.getElementById("done-table")
+
 document.getElementById("get-todo-elements").addEventListener("click",(e)=>{
    
     let title_field=document.getElementById("title-field")
@@ -12,7 +14,6 @@ document.getElementById("get-todo-elements").addEventListener("click",(e)=>{
     }
     let id=Date.now();
     localStorage.setItem(id,JSON.stringify(new_todo_elements))
-    let ul_done=doument.getElementById("done-table")
 })
 
 function displayTable(){
@@ -30,27 +31,32 @@ function displayTable(){
     }
 displayTable();
 let row =document.querySelectorAll("tr")
+row.id=`${Date.now()}`
+console.log(row.id)
 for (const rows in row){
     if (typeof row[rows] === 'object'){
     row[rows].addEventListener('click',()=>{
-        if (row[rows].style.textDecoration=="line-through"){
-            row[rows].style.textDecoration="none"
-            moveToDone(row)
-        }else{
+
+       
         row[rows].style.textDecoration ="line-through"
         moveToDone(row)
-        deleteRow(row)
-        }
+        // table_element.deleteRow(row )
+        
     })
 }}  
 
 console.log(row)
 function moveToDone(e){
     let li_done=document.createElement("li")
-    li_done.innerText=`${e}`
+    let string_e= e.toString(JSON.stringify())
+   
+    li_done.innerText=`${string_e}`
+    li_done.style.textDecoration=="line-through"
+
     ul_done.appendChild(li_done)
 
 }
+
 
     
 
