@@ -12,6 +12,7 @@ document.getElementById("get-todo-elements").addEventListener("click",(e)=>{
     }
     let id=Date.now();
     localStorage.setItem(id,JSON.stringify(new_todo_elements))
+    let ul_done=doument.getElementById("done-table")
 })
 
 function displayTable(){
@@ -34,13 +35,22 @@ for (const rows in row){
     row[rows].addEventListener('click',()=>{
         if (row[rows].style.textDecoration=="line-through"){
             row[rows].style.textDecoration="none"
+            moveToDone(row)
         }else{
         row[rows].style.textDecoration ="line-through"
+        moveToDone(row)
+        deleteRow(row)
         }
     })
 }}  
 
 console.log(row)
+function moveToDone(e){
+    let li_done=document.createElement("li")
+    li_done.innerText=`${e}`
+    ul_done.appendChild(li_done)
+
+}
 
     
 
