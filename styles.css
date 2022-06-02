@@ -1,9 +1,9 @@
 
 :root{
-    --main-color:#ef798a;
-    --secondary-color:#16BAC5;
-    --light-color:#ED6A5A;
-    --dark-color:#171D1C;
+    --main-color:#FFA630;
+    --secondary-color:#2E5077   ;
+    --light-color:#D7E8BA;
+    --dark-color:#611C35;
 }
 
 
@@ -17,7 +17,7 @@
 
 .main{
     background-color:var(--main-color);
-    padding: 5vw;
+    padding: 3vw;
     height:100%;
     border-radius: 20px;
     box-shadow: 3px 3px 8px 8px #3337;
@@ -41,15 +41,28 @@
 .all-tasks{
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding:5%;
+    padding:5px;
+    border: 1px solid var(--secondary-color);
+
 }
+.written-boxes{
+    display:flex;
+    flex-direction: column;
+}
+.other-boxes{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
 .new-list{
-    background-color: var(--secondary-color);
-    border:solid var(--light-color);
+    background-color: var(--light-color);
+    border:solid var(--dark-color);
     font-size:1rem;
-    width: 50%;
+    width: 40%;
     height:5px;
     max-width: 400px;
     margin: 0 auto;
@@ -57,9 +70,64 @@
     padding: 1.4rem 2rem 1.6rem;
     overflow-y: hidden;
     
+    
 }  
+.primary{
+    width:40%;
+    
+}
+.secondary{
+    width:70vw;
+    height:30px;
+    text-align: left;
+    align-items: flex-start;
+    
+}
+.priority{
+
+}
+.btn-create{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0.6em;
+    color: var(--light-color);
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    
+    
+
+}
+.task-list-title{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.table-box-main{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+
+}
+.table-box-main:hover{
+    cursor:pointer;
+
+}
 .class-box{
-    width: 100%;
+    width: 45%;
     height: 20vh;
     font-size: 1rem;
     background-color:var(--light-color);
@@ -67,6 +135,7 @@
     border-radius:20px;
     padding:5px;
     overflow: auto;
+    margin-bottom:5px
 
 
 }
