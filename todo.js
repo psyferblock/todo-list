@@ -31,9 +31,10 @@ function displayTable(){
             html = html + "<tr><td>"+info.title+"</td><td>"+info.description+"</td><td>"+info.priority+"</td><td>"+info.date_time+"</td></tr>"
         }
     }
-    table_element.innerHTML = html
+     table_element.innerHTML = html
         
-    }
+}
+
 displayTable();
 let row =document.querySelectorAll("tr")
 row.id=`${Date.now()}`
@@ -45,19 +46,21 @@ for (const rows in row){
        
         row[rows].style.textDecoration ="line-through"
         
-        moveToDone(row)
+        moveToDone(row[rows])
         // table_element.deleteRow(row )
         
     })
 }}  
 
 console.log(row)
-function moveToDone(e){
-    console.log(e)
+
+function moveToDone(item_to_move){
+    let ul_done=document.getElementById("done-table")
     let li_done=document.createElement("li")
-    let string_e= e.toString(JSON.stringify())
-   
-    li_done.innerText=`${string_e}`
+    let data = item_to_move.querySelectorAll("td")
+    data.forEach((entry)=>{
+        li_done.innerText+= `${entry.innerText}  `
+    })
     li_done.style.textDecoration=="line-through"
 
     ul_done.appendChild(li_done)

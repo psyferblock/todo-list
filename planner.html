@@ -13,64 +13,65 @@
 
 
     
-        <div class="main">
-            <h1 class="title">to do list </h1>
+    <div class="main">
+        <h1 class="title">to do list </h1>
 
-            <div >
-                <div class="all-tasks">
-                    <div class="written-boxes">
-                    <input type="text" class="new-list primary" id="title-field" placeholder="title" aria-label="new list name"/>
-                    <input type="text" class="new-list secondary" id="description-field" placeholder="describe it simply" aria-label="new list name"/>
-                   </div>
-                   <!-- boxes for priority,date and button -->
-                   <div class="other-boxes">
-                    <input type="text" list="choose-priority" class="new-list priority" id="priority-field" placeholder="priority" aria-label="new list name"/>
-                    
-                    <datalist id="choose-priority">
-                        <option value="high">
-                        <option value="neccessary">
-                        <option value="meh">
-                    </datalist>
-                    
-                    <input type="date" class="new-list" id="date-time-field" placeholder="new todo element" aria-label="new list name"/>
-                    </div>
-                    <div> 
-                    <button class="btn-create" id="get-todo-elements" aria-label="create new list">+</button>
-                    </div>
-                    
+        <div >
+            <div class="all-tasks">
+                <div class="written-boxes">
+                <input type="text" class="new-list primary" id="title-field" placeholder="title" aria-label="new list name"/>
+                <input type="text" class="new-list secondary" id="description-field" placeholder="describe it simply" aria-label="new list name"/>
                 </div>
-                <h2 class="task-list-title"><span>to do</span> <span>done </span></h2>
-                <hr >
-                <div class="all-tasks">
+                <!-- boxes for priority,date and button -->
+                <div class="other-boxes">
+                <input type="text" list="choose-priority" class="new-list priority" id="priority-field" placeholder="priority" aria-label="new list name"/>
+                
+                <datalist id="choose-priority">
+                    <option value="high">
+                    <option value="neccessary">
+                    <option value="meh">
+                </datalist>
+                
+                <input type="date" class="new-list" id="date-time-field" placeholder="new todo element" aria-label="new list name"/>
+                </div>
+                <div> 
+                <button class="btn-create" id="get-todo-elements" aria-label="create new list">+</button>
+                </div>
+                
+            </div>
+            
+            <div class="all-tasks">
                 <input type="text" id="searching-text"class="new-list">
                 <p><button class="btn-create"id="sort-btn">Sort</button></p>
-                </div>
-                <div class="table-box-main">   
-                    <div class="class-box">
-                            <table id="todo-table">
-                                <thead>
-                                    <tr>
-                                      <th class="th-list">title</th>
-                                      <th class="th-list">description</th>
-                                      <th class="th-list">priority</th>
-                                      <th class="th-list">date/time</th>
-                                    </tr>
-                                  </thead>
-                                 
-                            </table>
-
-                        </table>
-                    </div>
-                    <div class="class-box" id="done">
-                        <ul class="" id="done-table">
-
-                        </ul>
-                        
-                    </div>
-                    </div>
-
-                    </div>
             </div>
+            <h2 class="task-list-title"><span>to do</span> <span>done </span></h2>
+
+            <div class="table-box-main">   
+                <div class="class-box">
+                        <table id="todo-table">
+                            <thead>
+                                <tr>
+                                    <th class="th-list">title</th>
+                                    <th class="th-list">description</th>
+                                    <th class="th-list">priority</th>
+                                    <th class="th-list">date/time</th>
+                                </tr>
+                                </thead>
+                                
+                        </table>
+
+                    </table>
+                </div>
+                <div class="class-box" id="done">
+                    <ul class="" id="done-table">
+
+                    </ul>
+                    
+                </div>
+            </div>
+
+        
         </div>
-    </body>
+    </div>
+</body>
 </html>
