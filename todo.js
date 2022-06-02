@@ -58,7 +58,43 @@ function moveToDone(e){
     ul_done.appendChild(li_done)
 
 }
+let sort_btn=document.getElementById("sort-btn")
+sort_btn.addEventListener("click",sortTable)
 
+function sortTable() {
+    let table, rows, switching, i, x, y, shouldSwitch, priority;
+    table = document.getElementById("todo-table");
+    switching = true;
+    
+    while (switching) {
+      switching = false;
+      rows = table.rows;
+      for (i = 1; i < (rows.length - 1); i++) {
+        shouldSwitch = false;
+        
+        x = rows[i].getElementsByTagName("TD")[3];
+        y = rows[i + 1].getElementsByTagName("TD")[3];
+        if (x.innerHTML=="high"){
+            priority=3;
+        }
+        if (x.innerHTML=="neccessary"){
+            priority=2;
+        }
+        if (x.innerHTML=="meh"){
+            priority=1;
+        }
+        if (x.innerHTML > y.innerHTML) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }
+    }
+  }
 
     
 
