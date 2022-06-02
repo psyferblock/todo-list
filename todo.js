@@ -41,20 +41,20 @@ row.id=`${Date.now()}`
 console.log(row.id)
 for (const rows in row){
     if (typeof row[rows] === 'object'){
-    row[rows].addEventListener('click',()=>{
-
-       
-        row[rows].style.textDecoration ="line-through"
-        
-        moveToDone(row[rows])
-        // table_element.deleteRow(row )
-        
-    })
-}}  
-
+        row[rows].addEventListener('click',()=>{
+            moveToDone(row[rows])
+        })  
+    }
+}
 console.log(row)
-
+function alreadyDone(e){
+    return e.classList.contains("striked")
+}
 function moveToDone(item_to_move){
+    if (alreadyDone(item_to_move)){
+        return
+    }
+    item_to_move.classList.add("striked") 
     let ul_done=document.getElementById("done-table")
     let li_done=document.createElement("li")
     let data = item_to_move.querySelectorAll("td")
@@ -112,8 +112,3 @@ function sortTable() {
 function searchTodo(){
 
 }
-    
-
-
-
-

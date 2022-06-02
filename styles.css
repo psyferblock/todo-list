@@ -63,6 +63,7 @@
 .all-tasks{
     display:flex;
     flex-wrap: wrap;
+    
     justify-content: space-between;
     align-items: center;
     padding:5px;
@@ -152,7 +153,8 @@
 }
 .class-box{
     width: 45%;
-    height: 20vh;
+    height:;
+    max-height: 50vh;
     font-size: 1rem;
     background-color:var(--light-color);
     color:var(--dark-color);
@@ -162,4 +164,7 @@
     margin-bottom:5px
 
 
+}
+.striked{
+    text-decoration: line-through;
 }
