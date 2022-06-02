@@ -26,6 +26,8 @@ document.getElementById("get-todo-elements").addEventListener("click",(e)=>{
     description_field.value="";
     priority_field.value="";
     date_time_field.value="";
+    displayTable();
+
 
 });
 
@@ -92,11 +94,15 @@ sort_btn.addEventListener("click",sortTable)
 
 // sorts the tables  based on priority 
 
+let priorities= new Map(Object.entries({
+    high:3,
+    neccessary:2,
+    meh:1,
+}))
 function sortTable() {
-    let table, rows, switching, i, x, y, shouldSwitch, priority;
+    let table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("todo-table");
     rows=table.getElementsByTagName("tr")
-    priority=document.getElementById("priority-field")
     switching = true;
     
     while (switching) {
@@ -105,31 +111,30 @@ function sortTable() {
       for (i = 1; i < (rows.length - 1); i++) {
         shouldSwitch = false;
         
-        x = rows[i].getElementsByTagName("TD")[3];
-        y = rows[i + 1].getElementsByTagName("TD")[3];
-        if (x.innerHTML=="high"){
-            priority=3;
-        }
-        if (x.innerHTML=="neccessary"){
-            priority=2;
-        }
-        if (x.innerHTML=="meh"){
-            priority=1;
-        }
-        if (x.innerHTML > y.innerHTML) {
+        x = rows[i].getElementsByTagName("TD")[2];
+        y = rows[i + 1].getElementsByTagName("TD")[2];
+  
+        if (priorities.get(x.innerHTML) > priorities.get(y.innerHTML)) {
+
           shouldSwitch = true;
           break;
         }
       }
       if (shouldSwitch) {
         
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        // rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        let temp=rows[i];
+        rows[i]=rows[i+1];
+        rows[i+1]=temp;
         switching = true;
-      }else{
-        rows[i].parentNode.insertAfter(rows[i + 1], rows[i]);
-        switching = true;
+        
       }
     }
+    
+    rows.forEach((row)=>{
+        table.append(row);
+    })
+
   }
 
 //   search function based on title 
