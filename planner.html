@@ -15,25 +15,25 @@
         <div class="main">
             <h1 class="title">to do list </h1>
 
-            <div class="all-tasks">
-            
+            <div >
+                <div class="all-tasks">
                  
-                <input type="text" class="new list" id="title-field" placeholder="new todo element" aria-label="new list name"/>
-                <input type="text" class="new list" id="description-field" placeholder="new todo element" aria-label="new list name"/>
-                <input type="text" class="new list" id="priority-field" placeholder="new todo element" aria-label="new list name"/>
-                <input type="datetime-local" class="new list" id="date-time-field" placeholder="new todo element" aria-label="new list name"/>
+                    <input type="text" class="new-list" id="title-field" placeholder="title" aria-label="new list name"/>
+                    <input type="text" class="new-list" id="description-field" placeholder="describe it simply" aria-label="new list name"/>
+                    <input type="text" class="new-list" id="priority-field" placeholder="priority" aria-label="new list name"/>
+                    <input type="datetime-local" class="new-list" id="date-time-field" placeholder="new todo element" aria-label="new list name"/>
                         
                     <button class="btn create" id="get-todo-elements" aria-label="create new list">+</button>
-              
+                </div>
                 <h2 class="task-list-title">the to do elements</h2>
                     <div class="class-box">
                             <table id="todo-table">
                                 <thead>
                                     <tr>
-                                      <th>title</th>
-                                      <th>description</th>
-                                      <th>priority</th>
-                                      <th>date/time</th>
+                                      <th class="th-list">title</th>
+                                      <th class="th-list">description</th>
+                                      <th class="th-list">priority</th>
+                                      <th class="th-list">date/time</th>
                                     </tr>
                                   </thead>
                                  
